@@ -1,15 +1,20 @@
-import { Navbar } from "./Navbar/Navbar"
+
+import { AppRouter } from "./router/AppRouter"
 
 function App() {
 
   return (
     <>
-      <header className="h-24 bg-blue-dark">
+      <div className="bg-blue-dark">
+
+        <AppRouter />
+      </div>
+      {/* <header className="h-24 bg-blue-dark">
         <Navbar />
       </header>
       <h1>
         Hola mundo
-      </h1>
+      </h1> */}
     </>
   )
 }

@@ -21,18 +21,18 @@ const lenguages = { esp: listWindowsEsp, eng: listWindowsEng }
 export const Navbar = () => {
     const [lenguage, setLenguage] = useState('esp')
     return (
-        <nav className="flex justify-between items-center h-24 p-5">
+        <nav className="flex justify-between items-center h-24 p-5 bg-blue-dark text-lg font-medium">
             <div >
-                <a className="text-blue-light"> Numar Coy</a>
+                <a className="text-white text-xl"> Numar</a>
             </div>
             <div>
                 <ol className="flex justify-between items-center">
-                    {lenguages[lenguage].map(({ name, id }) => (<li className="mx-2 text-blue-light" key={id}>{name.toUpperCase()}</li>))}
+                    {lenguages[lenguage].map(({ name, id }) => (<li className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</li>))}
                 </ol>
             </div>
             <div className="">
-                <a onClick={() => setLenguage('eng')} className={`mx-2 text-blue-light ${lenguage === 'eng' ? 'font-black' : ''}`}>ENG</a>
-                <a onClick={() => setLenguage('esp')} className={`mx-2 text-blue-light ${lenguage === 'esp' ? 'font-black' : ''}`}>ESP</a>
+                <a onClick={() => setLenguage('eng')} className={`mx-2 text-white ${lenguage === 'eng' ? 'font-bold' : ''}`}>ENG</a>
+                <a onClick={() => setLenguage('esp')} className={`mx-2 text-white ${lenguage === 'esp' ? 'font-bold' : ''}`}>ESP</a>
             </div>
         </nav>
     )

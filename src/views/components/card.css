@@ -1,0 +1,11 @@
+img:hover {
+    transform: scale(2);
+}
+
+img {
+    transition: transform .5s;
+}
+
+article {
+    overflow: hidden;
+}

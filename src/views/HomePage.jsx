@@ -14,17 +14,18 @@ export const HomePage = () => {
                 <p className="text-3xl text-blue-light-2">Bienvenidos</p>
                 <p className="text-xl text-white">Mi nombre es Numar Stiven Coy Paez</p>
                 <p className="text-xl text-white">y soy desarrollador <span className="text-blue ">Frontend</span></p>
-                <div className="text-white text-2xl flex justify-start">
+                <div className="text-white text-2xl flex justify-start my-4">
                     {redSocialIcons.map(({ classNameIcon, url, key }) =>
                         (<a target='_blank' key={key} href={url} className="mr-2"><i className={classNameIcon}></i></a>)
                     )}
                 </div>
+                <button className="bg-blue-light shadow-md shadow-blue p-3 rounded-3xl text-blue-dark my-3 hover:bg-sky-700">
+                    Descargar CV
+                </button>
             </div>
 
-            <div className="w-1/2 h-full flex justify-center items-center "
-            >
+            <div className="w-1/2 h-full flex justify-center items-center">
                 <Card url={imageUrl} />
-
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 const listWindowsEsp = [
     { id: 1, name: 'Home', to: '/home' },
-    { id: 6, name: 'Perfil', to: '/aboutMe' },
+    { id: 6, name: 'Perfil', to: '/profile' },
     // { id: 2, name: 'Educación' },
     // { id: 3, name: 'Mi experiencia' },
     { id: 4, name: 'Proyectos', to: '/projects' },
@@ -12,7 +12,7 @@ const listWindowsEsp = [
 
 const listWindowsEng = [
     { id: 1, name: 'Home', to: '/home' },
-    { id: 6, name: 'About me', to: '/aboutMe' },
+    { id: 6, name: 'About me', to: '/profile' },
     // { id: 2, name: 'Education' },
     // { id: 3, name: 'Experience' },
     { id: 4, name: 'Projects', to: '/projects' },

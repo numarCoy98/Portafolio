@@ -1,4 +1,9 @@
+import { useNavigate, useLocation } from "react-router-dom";
+
+const nextPathName = { "/aboutMe": '/stack', '/stack': "/aboutMe" }
+
 export const AboutMe = () => {
+
     return (
         <div className="w-full flex justify-between bg-white py-3" style={{ height: '80vh' }}>
             <div className="w-1/2 flex justify-center items-center">

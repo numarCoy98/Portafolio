@@ -1,6 +1,8 @@
 
-import { AppRouter } from "./router/AppRouter"
 import { RedSocialIcons } from "./views/components"
+import { HomePage, AboutMe, Projects, Stacks } from "./views"
+import { Navbar } from "./Navbar/Navbar"
+import { Contact } from "./views/Contact"
 
 const redSocialIcons = [
   { key: 1, name: 'linkedin', classNameIcon: 'bx bxl-linkedin', url: 'https://www.linkedin.com/in/stiven-coy/' },
@@ -20,20 +22,18 @@ function App() {
           backgroundSize: "cover"
         }}
       >
-        <AppRouter />
+        <Navbar />
+        <HomePage />
+        <AboutMe />
+        <Stacks />
+        <Contact />
         <footer className="bg-[black]">
-          <p className="text-white text-center"> 2023 Copyright: Numar Stiven Coy Paez</p>
+          <p className="text-white text-center"> Hecho por: Numar Stiven Coy Paez</p>
           <div className="text-white  text-lg flex justify-center">
             <RedSocialIcons />
           </div>
         </footer>
       </div>
-      {/* <header className="h-24 bg-blue-dark">
-        <Navbar />
-      </header>
-      <h1>
-        Hola mundo
-      </h1> */}
     </>
   )
 }

@@ -3,7 +3,8 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     colors: {
-      gray: '#c2c6ce',
+      'gray-light': '#EDF2F5',
+      'gray': '#c2c6ce',
       'blue-light-2': '#dde8f0',
       'blue-light': '#97cbdc',
       'blue': '#018abd',

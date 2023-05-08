@@ -25,7 +25,7 @@ export const Navbar = () => {
     const [lenguage, setLenguage] = useState('esp')
     // const [lenguage, setWindow] = useState(1)
     return (
-        <nav className="flex justify-between items-center h-24 p-5 bg-blue-dark text-lg font-medium">
+        <nav className="flex justify-between items-center h-16 p-5 bg-blue-dark text-lg font-medium fixed w-full top-0">
             <div >
                 <a className="text-white text-xl"> Numar</a>
             </div>

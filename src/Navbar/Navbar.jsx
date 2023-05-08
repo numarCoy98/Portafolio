@@ -28,7 +28,7 @@ export const Navbar = () => {
     return (
         <nav className="flex justify-between items-center h-16 p-5 bg-blue-dark text-lg font-medium fixed w-full top-0">
             <div >
-                <a className="text-white text-xl"> Numar</a>
+                <p className="text-white text-xl"> Numar Coy</p>
             </div>
             <div>
                 <ol className="flex justify-between items-center">
@@ -36,7 +36,7 @@ export const Navbar = () => {
                     (<Link to={to}
                         smooth={true}
                         duration={500}
-                        className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light"
+                        className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light cursor-pointer"
                         key={id}>{name.toUpperCase()}
                     </Link>))}
                 </ol>

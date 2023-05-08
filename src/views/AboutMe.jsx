@@ -1,9 +1,9 @@
-import { useNavigate, useLocation } from "react-router-dom";
-
-const nextPathName = { "/aboutMe": '/stack', '/stack': "/aboutMe" }
+import { Link } from "react-scroll";
 
 export const AboutMe = () => {
+    // const onToContact = () => {
 
+    // }
     return (
         <div className="w-full flex justify-between bg-white py-16">
             <div className="w-1/2 flex justify-center items-center">
@@ -21,9 +21,13 @@ export const AboutMe = () => {
                     scripts para el área de minería de datos
                     en el lenguaje Python.
                 </p>
-                <button className='font-bold bg-blue-light shadow-md shadow-blue p-3 rounded-3xl text-blue-dark my-3 hover:bg-sky-700'>
+                <Link
+                    smooth={true}
+                    duration={500}
+                    to='contact'
+                    className='font-bold bg-blue-light shadow-md shadow-blue p-3 rounded-3xl text-blue-dark my-3 hover:bg-sky-700'>
                     Contactame
-                </button>
+                </Link>
             </div>
         </div>
     )

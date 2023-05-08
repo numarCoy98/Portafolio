@@ -3,19 +3,10 @@ import { RedSocialIcons } from "./views/components"
 import { HomePage, AboutMe, Projects, Stacks } from "./views"
 import { Navbar } from "./Navbar/Navbar"
 import { Contact } from "./views/Contact"
-import { useRef } from 'react';
 
 function App() {
 
   const imageUrl = '/background.JPEG'
-
-  // const homeRef = useRef(null);
-  // const profileRef = useRef(null);
-  // const contactRef = useRef(null);
-
-  // const scrollToBottom = () => {
-  //   contactRef.current?.scrollIntoView({ behavior: "smooth", block: 'end' })
-  // }
 
   return (
     <>

@@ -6,7 +6,6 @@ const { VITE_PUBLIC_KEY_EMAILJS } = getEnvVariables()
 const status = { 200: true, 400: false }
 
 export const sendEmail = async (infoForm) => {
-    console.log({ infoForm, emailjs })
     const answers = { toMe: false, toU: false }
     await emailjs.send('service_rbk4mfm', 'template_hsev9cn', { ...infoForm }, VITE_PUBLIC_KEY_EMAILJS)
         .then(function (response) {

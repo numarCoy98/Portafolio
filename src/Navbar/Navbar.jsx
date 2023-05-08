@@ -1,6 +1,4 @@
 import { useState } from "react"
-// import { NavLink } from "react-router-dom"
-// import { NavHashLink } from 'react-router-hash-link';
 import { Link } from "react-scroll";
 
 const listWindowsEsp = [
@@ -34,8 +32,6 @@ export const Navbar = () => {
             </div>
             <div>
                 <ol className="flex justify-between items-center">
-                    {/* {lenguages[lenguage].map(({ name, id }) => (<li className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</li>))} */}
-                    {/* {lenguages[lenguage].map(({ name, id, to }) => (<NavHashLink to={to} smooth className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</NavHashLink>))} */}
                     {lenguages[lenguage].map(({ name, id, to }) =>
                     (<Link to={to}
                         smooth={true}

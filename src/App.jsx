@@ -3,16 +3,19 @@ import { RedSocialIcons } from "./views/components"
 import { HomePage, AboutMe, Projects, Stacks } from "./views"
 import { Navbar } from "./Navbar/Navbar"
 import { Contact } from "./views/Contact"
-
-const redSocialIcons = [
-  { key: 1, name: 'linkedin', classNameIcon: 'bx bxl-linkedin', url: 'https://www.linkedin.com/in/stiven-coy/' },
-  { key: 2, name: 'github', classNameIcon: 'bx bxl-github', url: 'https://github.com/numarCoy98' },
-  { key: 3, name: 'instagram', classNameIcon: 'bx bxl-instagram', url: 'https://www.instagram.com/numarcoy3/' }
-]
+import { useRef } from 'react';
 
 function App() {
 
   const imageUrl = '/background.JPEG'
+
+  // const homeRef = useRef(null);
+  // const profileRef = useRef(null);
+  // const contactRef = useRef(null);
+
+  // const scrollToBottom = () => {
+  //   contactRef.current?.scrollIntoView({ behavior: "smooth", block: 'end' })
+  // }
 
   return (
     <>
@@ -23,10 +26,18 @@ function App() {
         }}
       >
         <Navbar />
-        <HomePage />
-        <AboutMe />
-        <Stacks />
-        <Contact />
+        <div id="home">
+          <HomePage />
+        </div>
+        <div id="profile">
+          <AboutMe />
+        </div>
+        <div id="habilities">
+          <Stacks />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
         <footer className="bg-[black]">
           <p className="text-white text-center"> Hecho por: Numar Stiven Coy Paez</p>
           <div className="text-white  text-lg flex justify-center">

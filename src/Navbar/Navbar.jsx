@@ -1,13 +1,16 @@
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
+// import { NavHashLink } from 'react-router-hash-link';
+import { Link } from "react-scroll";
 
 const listWindowsEsp = [
-    { id: 1, name: 'Home', to: '/home' },
-    { id: 6, name: 'Perfil', to: '/profile' },
+    { id: 1, name: 'Home', to: 'home' },
+    { id: 6, name: 'Perfil', to: 'profile' },
+    { id: 7, name: 'Habilidades', to: 'habilities' },
     // { id: 2, name: 'Educación' },
     // { id: 3, name: 'Mi experiencia' },
-    { id: 4, name: 'Proyectos', to: '/projects' },
-    // { id: 5, name: 'Contacto' }
+    // { id: 4, name: 'Proyectos (Proximamente)', },
+    { id: 5, name: 'Contacto', to: 'contact' }
 ]
 
 const listWindowsEng = [
@@ -22,8 +25,8 @@ const listWindowsEng = [
 const lenguages = { esp: listWindowsEsp, eng: listWindowsEng }
 
 export const Navbar = () => {
+
     const [lenguage, setLenguage] = useState('esp')
-    // const [lenguage, setWindow] = useState(1)
     return (
         <nav className="flex justify-between items-center h-16 p-5 bg-blue-dark text-lg font-medium fixed w-full top-0">
             <div >
@@ -32,13 +35,20 @@ export const Navbar = () => {
             <div>
                 <ol className="flex justify-between items-center">
                     {/* {lenguages[lenguage].map(({ name, id }) => (<li className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</li>))} */}
-                    {lenguages[lenguage].map(({ name, id, to }) => (<NavLink to={to} className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</NavLink>))}
+                    {/* {lenguages[lenguage].map(({ name, id, to }) => (<NavHashLink to={to} smooth className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light" key={id}>{name.toUpperCase()}</NavHashLink>))} */}
+                    {lenguages[lenguage].map(({ name, id, to }) =>
+                    (<Link to={to}
+                        smooth={true}
+                        duration={500}
+                        className="mx-2 text-white transition duration-200 delay-150 hover:text-blue-light"
+                        key={id}>{name.toUpperCase()}
+                    </Link>))}
                 </ol>
             </div>
-            <div className="">
+            {/* <div className="">
                 <a onClick={() => setLenguage('eng')} className={`mx-2 text-white ${lenguage === 'eng' ? 'font-bold' : ''}`}>ENG</a>
                 <a onClick={() => setLenguage('esp')} className={`mx-2 text-white ${lenguage === 'esp' ? 'font-bold' : ''}`}>ESP</a>
-            </div>
+            </div> */}
         </nav>
     )
 }

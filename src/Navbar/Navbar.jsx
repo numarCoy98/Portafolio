@@ -30,7 +30,7 @@ export const Navbar = () => {
             <div >
                 <p className="text-white text-xl"> Numar Coy</p>
             </div>
-            <div>
+            <div className="hidden sm:block">
                 <ol className="flex justify-between items-center">
                     {lenguages[lenguage].map(({ name, id, to }) =>
                     (<Link to={to}
@@ -41,6 +41,12 @@ export const Navbar = () => {
                     </Link>))}
                 </ol>
             </div>
+            <div className=" sm:hidden">
+                <div className="text-white text-2xl">
+                    <i className='bx bx-menu'></i>
+                </div>
+            </div>
+
             {/* <div className="">
                 <a onClick={() => setLenguage('eng')} className={`mx-2 text-white ${lenguage === 'eng' ? 'font-bold' : ''}`}>ENG</a>
                 <a onClick={() => setLenguage('esp')} className={`mx-2 text-white ${lenguage === 'esp' ? 'font-bold' : ''}`}>ESP</a>

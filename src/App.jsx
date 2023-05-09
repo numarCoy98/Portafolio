@@ -29,9 +29,9 @@ function App() {
         <div id="contact">
           <Contact />
         </div>
-        <footer className="bg-[black]">
-          <p className="text-white text-center"> Hecho por: Numar Stiven Coy Paez</p>
-          <div className="text-white  text-lg flex justify-center">
+        <footer className="bg-[black] h-16">
+          <p className="text-white text-center text-xl"> Hecho por: Numar Stiven Coy Paez</p>
+          <div className="text-white text-xl flex justify-center">
             <RedSocialIcons />
           </div>
         </footer>

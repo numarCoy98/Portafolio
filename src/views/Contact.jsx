@@ -29,7 +29,7 @@ export const Contact = () => {
     }
     return (
         <div className="bg-blue-dark flex justify-center">
-            <div className="rounded-xl py-16 w-1/2">
+            <div className="rounded-xl py-16 w-4/5 md:w-1/2">
                 <p className="text-4xl text-white text-center my-3">Contactame </p>
                 <form onSubmit={onSubmit} className='bg-white flex flex-col container rounded-xl' >
                     {listInputs.map(({ id, type, name, placeholder }) => (
